@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+
+<body>
+
+    <form action="/user/<%= name.id %>?_method=PATCH" method="post">
+        <h1 name="id">UserId:<%=name.id %>
+        </h1>
+        <h1>UserName:<%=name.name %>
+        </h1>
+        <h1>You are updating email: <input name="email" type="text" value="<%=name.email %>"
+                style="width: 300px;height:15px; font-size: 20px; padding: 10px;"></h1>
+
+        <h1>You are updating password: <input name="password" type="password" id="password" value="<%=name.password %>"
+                style="width: 300px;height:15px; font-size: 20px; padding: 10px;">
+            <input type="checkbox" onclick="togglePassword()"> Show Password
+        </h1>
+
+        <script>
+            function togglePassword() {
+                const passField = document.getElementById("password");
+                if (passField.type === "password") {
+                    passField.type = "text";
+                } else {
+                    passField.type = "password";
+                }
+            }
+        </script>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

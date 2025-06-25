@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px black solid;
+            /* Corrected border style */
+            /* margin: 0px; */
+            border-collapse: collapse;
+            /* padding: 8px;  */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://localhost:8080/">Back to home page</a>
+    <h1></h1>
+    <table>
+        <tr>
+            <th>UserId</th>
+            <th>UserName</th>
+            <th>UserEmail</th>
+            <th>Edit</th>
+        </tr>
+        <% for(res of results){ %>
+            <tr>
+                <td>
+                    <%=res.id %>
+                </td>
+                <td>
+                    <%=res.name %>
+                </td>
+                <td>
+                    <%=res.email %>
+                </td>
+                <td>
+                    <form action="/users/<%= res.id %>/edit" method="get">
+                        <button type="submit">Edit</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/users/<%= res.id %>/delete?_method=Delete" method="post">
+                        <button >Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>

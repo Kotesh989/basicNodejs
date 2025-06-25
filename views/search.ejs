@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <h1>UserId:<%=results[0].id %>  </h1>
+    <h1>UserName:<%=results[0].name %></h1>
+    <h1>UserEmail:<%=results[0].email %></h1>
+    <a href="http://localhost:8080/users/<%= results[0].id %>/edit"><button type="submit">Edit</button></a>
+</body>
+</html>

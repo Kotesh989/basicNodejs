@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <h1>Welcome to our website!!</h1>
+    <h2>Total Number of users:<%= count %>
+    </h2>
+    <form action="/users" method="post">
+        <label for="name1">Enter user_name:</label>
+        <input type="text" name="name1">
+        <label for="user">Enter password:</label>
+        <input type="password" name="pass">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="http://localhost:8080/users" style="font-size: 20px;"><button style="font-size: 20px;"> Users</button></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://localhost:8080/users/register" style="font-size: 20px;"><button style="font-size: 20px;"> Add Users</button></a>
+
+</body>
+
+</html>
